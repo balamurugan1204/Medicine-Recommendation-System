@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medical Health Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .logo {
+            width: 50px;
+            height: 50px;
+            color: black;
+            margin-top: 0;
+            margin-left: 2px;
+        }
+         .myimg {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+        body {
+            background-color: #f4f4f4;
+        }
+        .hero {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            color: #0072ff;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+        <div class="logo">
+            <img class="myimg" src="{{ url_for('static', filename='img.png') }}" alt="">
+        </div>
+        <a class="navbar-brand" href="{{ url_for('home') }}">Medical Health Center</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('blog') }}">Blog</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn custom-btn" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Custom CSS -->
+<style>
+/* Navbar Styling */
+.custom-navbar {
+    background-color: #f4f4f4 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Brand */
+.custom-navbar .navbar-brand {
+    color: #0072ff;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.custom-navbar .nav-link {
+    color: #0072ff;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar Links Hover */
+.custom-navbar .nav-link:hover {
+    color: #0056b3;
+}
+
+/* Active Link */
+.custom-navbar .nav-link.active {
+    font-weight: bold;
+}
+
+/* Button Styling */
+.custom-btn {
+    background-color: #0072ff;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.custom-btn:hover {
+    background-color: #0056b3;
+}
+</style>
+    <div class="hero">
+        <h1>Welcome to Medical Health Center</h1>
+        <p>Where health meets technology for a brighter, healthier future.</p>
+    </div>
+
+    <div class="container my-4">
+        <h2 class="text-center">Symptom-Based Disease Diagnosis Application</h2>
+        <p>With the rise of technology, remote healthcare solutions are more critical than ever. Our Symptom-Based Disease Diagnosis Web App leverages Flask and a Decision Tree Classifier model to help users identify potential illnesses based on their reported symptoms.</p>
+
+        <h3>The Problem</h3>
+        <p>Users often experience symptoms and want quick answers about their health. Our application helps differentiate between overlapping symptoms to provide a preliminary diagnosis.</p>
+
+        <h3>The Solution</h3>
+        <ol>
+            <li><strong>Symptom Input:</strong> Users enter their symptoms via an intuitive interface.</li>
+            <li><strong>Machine Learning Model:</strong> A Decision Tree Classifier predicts potential diseases.</li>
+            <li><strong>Prediction:</strong> The app provides real-time disease predictions.</li>
+            <li><strong>Additional Information:</strong> Disease descriptions, precautions, medications, and more.</li>
+        </ol>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>Intuitive Interface:</strong> Easy navigation for users.</li>
+            <li><strong>Accurate Predictions:</strong> AI-driven analysis for health concerns.</li>
+            <li><strong>Comprehensive Information:</strong> Diet, medications, and workout advice included.</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>By combining machine learning with healthcare, we aim to make health insights more accessible. This tool serves as an educational resource and a preliminary step for users seeking medical advice.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
